@@ -1,0 +1,26 @@
+.MuiDialog-root,.MuiPopover-root{
+    z-index: 12000 !important;
+}
+
+.MuiDialog-root .MuiPickersCalendarHeader-switchHeader .MuiIconButton-root{
+    width: auto;
+}
+
+.MuiFormControl-root{
+    width: 100%;
+}
+.MuiInput-root {
+    position: relative;
+    width: 100%;
+}
+.MuiFormControlLabel-labelPlacementStart {
+    padding-top: 25px;
+}
+.PrivateSwitchBase-root-1{
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.MuiFormGroup-root[role="radiogroup"] {
+    display: flex;
+    flex-direction: row;
+}

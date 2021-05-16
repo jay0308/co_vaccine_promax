@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+@import "./global.scss";
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #222222;
+    line-height: 1.2;
+    font-weight: 400;
+    background: #fff;
+}
+.appShell{
+    // padding-top: 68px;
+    background: #fff;
+    .appContainer{
+        // display: flex;
+        // min-height: 500px;
+        height: 100vh;
+
+        @media screen and(min-width:769px){
+            height: 100%;
+        }
+    }
+    .desktopRouteError{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .notFound{
+            font-size: 45px;
+            display: block;
+            /* margin-bottom: 20px; */
+            font-weight: bold;
+            color: $base-color;
+        }
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    display: block;
+    width: 100%;
+    background: #0d0d63;
+    color: #fff;
+    border: 1px solid #0d0d63;
+    padding: 10px;
+    border-radius: 4px;
+
+    &:disabled{
+        opacity: 0.2;
+    }
+
+    &:focus,
+    &:active{
+        outline: none;
+    }
+}
+
+table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td,tr {
+    border: 1px solid #bbb;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+thead {
+    background: #ddd;
+}

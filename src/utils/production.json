@@ -1,0 +1,17 @@
+{
+    "ENV": "prod",
+    "DB_URL": "localhost:27017",
+    "PUBLIC_URL": "http://103.86.177.182",
+    "PORT": "5000",
+    "SMS_KEY": "e2333edf",
+    "SMS_SECRET_KEY": "PWfVtWo1CiDKsPkH",
+    "DB": "guidebusdb",
+    "API_SECRET_KEY": "crickhataapisecretkey",
+    "MAILJET_USER":"5723f0d7a7728b0039c2aace581936e3",
+    "MAILJET_PASSWORD":"39925f2be4379b76231be98196ebf01b",
+    "INSTAMOJO_API_KEY":"test_e77560e9ed4ed7575b3211298e6",
+    "INSTAMOJO_AUTH_TOKEN":"test_a62a1da155a54c7b429d71a84c4",
+    "INSTAMOJO_BASE_URI":"https://test.instamojo.com/api/1.1/",
+    "RAZORPAY_KEY_ID":"rzp_live_gMqqbJjU9brXxk",
+    "RAZORPAY_KEY_SECRET":"7nVSY81IGhuY9h27mYfLgKfC"
+}

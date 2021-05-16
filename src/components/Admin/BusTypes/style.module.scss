@@ -1,0 +1,98 @@
+@import "../../../global.scss";
+
+.busTypesHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .actionBtns{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+
+        button{
+            max-width: 150px;
+            background: $base-color;
+            border-color: $base-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.busTypesListCont{
+    padding-top: 40px;
+    .busTypeItem{
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+        margin-bottom: 25px;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            background: #ddd;
+            left: 50%;
+        }
+
+        .inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .left{
+                width: 50%;
+                padding-right: 30px;
+            }
+            .right{
+                width: 50%;
+                padding-left: 30px;
+            }
+            .row{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+
+                button{
+                    display: inline-block;
+                    width: auto;
+                    min-width: 100px;
+                    margin-top: 30px;
+                }
+
+                .label{
+                    font-weight: 600;
+                    padding-right: 20px;
+                }
+            }
+            .seats{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .seatRow{
+                display: flex;
+                input{
+                    text-align: center;
+                }
+                .seatBox{
+                    border: 1px solid #ddd;
+                    margin: 1px;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    &.filled{
+                        background: blue;
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
+}

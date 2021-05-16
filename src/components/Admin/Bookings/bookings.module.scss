@@ -1,0 +1,55 @@
+@import "../../../global.scss";
+.noDataFound{
+    padding: 40px 0;
+}
+.dateFilter{
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+.bookingCard{
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin-bottom: 25px;
+    max-width: 600px;
+
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+
+        .label{
+            font-weight: 600;
+            width: 40%;
+        }
+        .value{
+            width: 60%;
+        }
+    }
+}
+
+.refunded{
+    background: rgba($color: green, $alpha: 0.5);
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.notRefunded{
+    background: rgba($color: red, $alpha: 0.5);
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.refundNowBtn{
+    margin-left: 50px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    font-weight: bold;
+    color: $base-color;
+}

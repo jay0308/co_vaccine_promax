@@ -1,0 +1,31 @@
+.loginSection{
+    padding: 40px 16px;
+    max-width: 680px;
+    margin: 0 auto;
+
+    h2{
+        text-align: left;
+        margin: 30px 0 50px 0;
+        font-size: 18px;
+        color: #0d0d63;
+    }
+
+    .textField,
+    div{
+        display: flex;
+        width: 100%;
+    }
+
+    .textField{
+        margin-bottom: 15px;
+    }
+
+    .submitBtns{
+        padding-top: 30px;
+    }
+    .registerTxt{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 12px;
+    }
+}

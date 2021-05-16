@@ -1,0 +1,184 @@
+@import "../../global.scss";
+
+.busSearchContainer {
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+.searchWrapper {
+  display: flex;
+  background: #fff;
+  margin: 10px;
+  padding: 10px 0px;
+  box-sizing: content-box;
+  flex-direction: column;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 1px 1px 6px #d2d2d2;
+  .swapIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    .MuiSvgIcon-root {
+      font-size: 30px;
+      color: $base-color;
+    }
+  }
+}
+.source,
+.destination {
+  position: relative;
+  padding: 0 50px;
+  box-sizing: border-box;
+  .makeStyles-formControl-1 {
+    width: 100%;
+    margin: 8px 0;
+  }
+  img {
+    width: 25px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.selectDate {
+  display: flex;
+  background: #fff;
+  margin: 10px 10px 10px 10px;
+  box-sizing: content-box;
+  flex-direction: column;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 1px 1px 6px #d2d2d2;
+}
+.dateWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.wrapperLeft {
+  width: 100%;
+  padding: 10px;
+  p {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    color: #5d5d5d;
+    font-weight: 400;
+  }
+}
+input[type="date"] {
+  border: none;
+  border-bottom: 1px solid #8c8c8c;
+  background: none;
+  width: 100%;
+}
+.searchBtnWrapper {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span.searchBtn {
+    text-align: center;
+    background: $base-color;
+    color: #fff;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    display: flex;
+    width: 80%;
+    font-size: 16px;
+    .MuiSvgIcon-root {
+      font-size: 25px;
+    }
+  }
+}
+.listWrapper{
+  h2{
+    padding: 0 10px;
+    margin: 20px 0;
+    font-size: 16px;
+  }
+}
+.ResultCard {
+  display: flex;
+  background: #fff;
+  margin: 10px;
+  padding: 15px 10px;
+  box-sizing: content-box;
+  flex-direction: row;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 1px 1px 6px #d2d2d2;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+.startTime {
+  color: #090909;
+  font-weight: 600;
+  margin: 0 5px 0 0;
+}
+.reachTime {
+  font-weight: 600;
+  color: rgb(53, 53, 53);
+}
+p.busName {
+  font-size: 16px;
+  padding: 5px 0;
+  font-weight: 500;
+  color: $base-color;
+}
+.busType {
+  font-size: 12px;
+  color: #6b6b6b;
+  margin-top: 15px;
+}
+.fairAmount {
+  font-weight: 700;
+  font-size: 18px;
+  color: #696868;
+  margin: 0 0 5px 0;
+}
+p.totalTime {
+  color: #6b6b6b;
+}
+
+.bookNow{
+  color: $base-color;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.error{
+  background: #ff00001c;
+  text-align: center;
+  border: 1px solid red;
+  margin: 15px 10px 30px;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: normal;
+  color: red;
+  font-size: 13px;
+}
+.noBusFound {
+  padding: 20px 10px;
+}
+
+.MuiMenuItem-root{
+  white-space: normal !important;
+}
+.busSearchContainer .MuiButtonBase-root{
+  width: auto !important;
+}
+
+.resultDesktopCard {
+  margin: 10px;
+  background: #fff;
+  padding: 0 10px 30px;
+  .left{
+    width: 70%;
+  }
+}

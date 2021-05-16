@@ -1,0 +1,28 @@
+@import "../../global.scss";
+
+.mainCont{
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 90px;
+}
+
+.dragBox{
+    button{
+        position: fixed;
+        bottom: 100px;
+        right: 40px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.6) 1px 2px 4px;
+        @include globalGradient();
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.noPost{
+    text-align: center;
+    font-weight: normal;
+}

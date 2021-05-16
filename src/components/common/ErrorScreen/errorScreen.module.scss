@@ -1,0 +1,36 @@
+@import "../../../global.scss";
+
+.errorScreenContainer{
+    height: 100%;
+    background: #fff;
+
+    .errorScreenInner{
+        max-width: 680px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        min-height: 500px;
+
+        .errorMsg{
+            margin-bottom: 20px;
+        }
+
+        button{
+            @include secondaryButton();
+        }
+    }
+}
+
+.errorFallback{
+    position: fixed;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+}

@@ -1,0 +1,395 @@
+@import "../../../global.scss";
+
+.busDetailsWrapper{
+    padding-top: 30px;
+
+    .busDetailsCard{
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        // width: 600px;
+        overflow: hidden;   
+        .topBar{
+            background:$base-color;;
+            padding: 15px 20px;
+            color: #fff;
+            font-weight: 600;
+        }
+        .busDetailsCardInner{
+            padding: 20px;  
+            .row{
+                margin-bottom: 10px;
+            }
+            .label{
+                width: 150px;
+                font-weight: 600;
+                display: inline-block;
+                position: relative;
+                &:after{
+                    content:":";
+                }
+            }
+            .router{
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                margin-bottom: 15px;
+                margin-top: 10px;
+
+                .location{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    font-size: 11px;
+                    align-items: center;
+                    position: relative;
+                    padding: 10px;
+                    padding-left: 20px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
+
+                // &::after{
+                //     content: "";
+                //     position: absolute;
+                //     top: 4px;
+                //     left: 0;
+                //     width: 100%;
+                //     height: 2px;
+                //     background: #ccc;
+                // }
+            }
+            .arrow{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .stop{
+                display: flex;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: rgba($color: $base-color, $alpha: 0.5);
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                z-index: 1;
+                position: absolute;
+                left: 3px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                span{
+                    display: block;
+                }
+            }
+        }
+    }
+    .bottomBar{
+        display: flex;
+        border-top: 1px solid #ddd;
+        button{
+            border-radius: 0;
+            cursor: pointer;
+            border: none;
+            background: #fff;
+            font-weight: 600;
+            color: $base-color;
+
+            &:hover{
+                color: #fff;
+                background: rgba($color: $base-color, $alpha: 0.5);
+            }
+
+            &:first-child{
+                border-right: 1px solid #ddd;
+            }
+        }
+    }
+}
+
+.busDetailsHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .actionBtns{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+
+        button{
+            max-width: 150px;
+            background: $base-color;
+            border-color: $base-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.addBusForm{
+    padding: 20px;
+    button{
+        display: block;
+        width: 100px;
+    }
+    .formRow{
+        width: 100%;
+        .block{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 15px;
+            .addDate{
+                width: 100px;
+                display: block;
+                font-weight: 600;
+                color: #f50057;
+                cursor: pointer;
+            }
+            &.dateRow{
+                padding: 10px 10px 5px;
+                border: 1px solid #ddd;
+                width: 100%;
+                display: block;
+
+                .dateList{
+                    border: 1px solid #f50057;
+                    margin-right: 20px;
+                    display: inline-block;
+                    padding: 5px;
+                    border-radius: 4px;
+                    margin-bottom: 5px;
+
+                    span{
+                        margin-left: 10px;
+                        color: #f50057;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .formBox{
+        display: flex;
+
+        .formInner{
+            width: 70%;
+            min-width: 680px;
+            padding-right: 20px;
+        }
+        .seatMatrix{
+            width: 30%;
+            border-left: 1px solid #ddd;
+            padding-left: 20px;
+            min-width: 200px;
+
+            h3{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .formField{
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+
+        &.column{
+            flex-direction: column;
+            align-items: flex-start;
+            
+        }
+        .formFieldLeft{
+            width: 50%;
+        }
+        .formFieldRight{
+            width: 50%;
+        }
+    }
+    .routesForm{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        .routeCol{
+            margin-right: 10px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    .submitBtn{
+        margin:40px auto 0;
+    }
+    .addBtn{
+        margin-top: 15px;
+    }
+}
+.hint{
+    font-size: 11px;
+    color: grey;
+}
+
+.avalRoutes{
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+    .row{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        .busTypeDesc{
+            width: 80%;
+        }
+
+        button{
+            height: 30px;
+            margin-left: 40px;
+            padding: 4px;
+        }
+    }
+}
+.addBusTypeForm{
+    .routesForm{
+        width: 100%;
+        .routeCol{
+            margin-right: 30px;
+        }
+    }
+}
+
+.routeModalCont{
+    .tabsBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .tabs{
+            width: 50%;
+            border-bottom: 2px solid #ccc;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 600;
+            padding: 15px;
+
+            &.active{
+                border-color: $base-color;
+                color: $base-color;
+                font-weight: 600;
+            }
+        }
+    }
+    .tabContent{
+        padding: 20px 10px;
+        height: 370px;
+        overflow: auto;
+        margin: 0 -20px;
+    }
+    .location{
+        display: block;
+        padding: 15px;
+        padding-left: 40px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            background: rgba($color: $base-color, $alpha: 0.5);
+            display: block;
+        }
+    }
+}
+.themeFont{
+    font-weight: 600;
+    color: $base-color;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.seatAreaCont{
+    width: 100%;
+    .selectSeatArea{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        .seatRow{
+            display: flex;
+            input,.customCheckbox{
+                text-align: center;
+            }
+            .seatBox{
+                border: 1px solid #ddd;
+                margin: 1px;
+                width: 40px;
+                text-align: center; 
+
+                &.filled{
+                    background: blue;
+
+                    input,.customCheckbox{
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.seatMatrix{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    width: 100%;
+
+    .row{
+        display: flex;
+        width: 80%;
+        justify-content: center;
+
+        .block{
+            width: 40px;
+            height: 40px;
+            position: relative;
+            margin: 1px;
+            background: #eee;
+
+            & > span, input,.customCheckbox{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #ddd;
+            }
+            input,.customCheckbox{
+                opacity: 0;
+                z-index: 1;
+            }
+            & > input,.customCheckbox.checked + span{
+                background: orange;
+            }
+
+            & > input,.customCheckbox.disabled + span{
+                background: #ff3a43;
+            }
+        }
+    }
+}

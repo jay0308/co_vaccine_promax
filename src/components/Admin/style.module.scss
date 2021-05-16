@@ -1,0 +1,18 @@
+.cancelPayForm{
+    max-width: 600px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .inner{
+        .field{
+            margin-bottom: 25px;
+            label{
+                cursor: pointer;
+                margin-right: 40px;
+            }
+            button{
+                max-width: 200px;
+            }
+        }
+
+    }
+}

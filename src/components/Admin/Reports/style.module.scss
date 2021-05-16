@@ -1,0 +1,97 @@
+@import "../../../global.scss";
+
+.fields{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchResults{
+    padding-top: 40px;
+    a{
+        display: block; 
+        padding: 10px 20px;
+        margin: 40px;
+        width: 200px;
+        text-align: center;
+        background: blue;
+        color: #fff;
+        border-radius: 10px;
+    }
+}
+.tabs{
+    display: flex;
+    margin: 40px 0;
+    border-bottom: 1px solid #ddd;
+
+    .tab{
+        cursor: pointer;
+        font-weight: 600;
+        margin-right: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid transparent;
+
+        &.active{
+            color: $base-color;
+            border-color: $base-color;
+        }
+    }
+}
+
+.defaultUserBox{
+    .userListItem{
+        .row{
+            display: flex;
+            align-items: center;
+
+            &.heading{
+                font-weight: 600;
+            }
+
+            .block{
+                width: 190px;
+                word-break: break-word;
+                border: 1px solid #ddd;
+                padding: 10px;
+                height: 60px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+
+                input{
+                    height: 30px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    padding: 10px;
+                    width: 100%;
+                }
+
+                button{
+                    display: inline-block;
+                    width: auto;
+                    padding: 10px 15px;
+                    cursor: pointer;
+                    
+                    &:first-child{
+                        margin-right: 10px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+.wrapBtn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    button{
+        max-width: 200px;
+    }
+}
+
+.pickupPop{
+    .formField{
+        margin-bottom: 20px;
+    }
+}

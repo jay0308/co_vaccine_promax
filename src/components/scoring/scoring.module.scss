@@ -1,0 +1,65 @@
+@import "../../global.scss";
+
+.choosePlayer{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 20px;
+
+    .batsmen{
+        text-align: left;
+    }
+    .baller{
+        text-align: right;
+    }
+
+    .selector{
+        span{
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            font-weight: 600;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        &.selected{
+            span{
+                @include globalGradient();
+                color: #fff; 
+            }           
+        }
+    }
+    .vs{
+        text-align: center;
+        margin:30px 0;
+        span{
+            min-width: auto;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            padding: 0;
+            line-height: 40px;
+            @include globalGradient();
+            color: #fff;
+        }
+    }
+
+    .actionBtns{
+        display: flex;
+        margin-top: 70px;
+        justify-content: space-around;
+
+        button{
+            background: #fff;
+            color: #0d0d63;
+            width: auto;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+    }
+}

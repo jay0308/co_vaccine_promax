@@ -1,0 +1,65 @@
+@import "../../../global.scss";
+
+.headerSec{
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FF3A43;
+    color: #fff;
+    display: inline-block;
+    align-items: center;
+    box-sizing: border-box;
+    height: 68px;
+    // @include globalGradient();
+
+    a{
+        color: #fff;
+    }
+
+    span{
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .SearchIcon{
+        float: right;
+        margin-right: 0;
+    }
+}
+
+.adminHeader{
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+
+    span{
+        cursor: pointer;
+    }
+}
+
+.sideMenu{
+    position: fixed;
+    top: 68px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 68px);
+    background: #ccc;
+
+    .menuOptions{
+        padding-top: 30px;
+    }
+
+    .menuItem{
+        padding: 10px 20px;
+        a{
+            color: $base-color;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.postPaymentContainer{
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    flex-direction: column;
+
+    .success,.fail{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: rgba($color: green, $alpha: 0.2);
+        border: 1px solid rgba($color: green, $alpha: 0.6);
+        font-size: 20px;
+        padding: 15px;
+        font-weight: 600;
+        border-radius: 7px;
+        margin-bottom: 50px;
+
+        span{
+            display: flex;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba($color: green, $alpha: 0.5);
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .fail{
+        background: rgba($color: red, $alpha: 0.2);
+        border: 1px solid rgba($color: red, $alpha: 0.6);
+        span{
+            background: rgba($color: red, $alpha: 0.5);
+        }
+    }
+
+    .bookAgain{
+        display: inline-block;
+        padding: 15px 20px;
+        background: royalblue;
+        color: #fff;
+        border-radius: 4px;
+    }
+}
