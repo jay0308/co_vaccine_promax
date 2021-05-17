@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router({mergeParams: true});
-// const googleDriveService = require("../services/GoogleDrive");
+const app = express();
+const coVaccineService = require("../services/coVaccineService");
 const responseBaseClass = require("../BaseClasses/GenericResponse");
-const utilService = require("../services/UtilityService");
 
-router.get("/playerStyles",async function(req,res){
+router.post("/userScope",async function(req,res){
     try{
-        let result = await utilService.getPlayerStyles(req,res);
+        let result = await coVaccineService.userScope(req,res);
         let gr = new responseBaseClass.GenericResponse(`${result.status ? "success" : "error"}`,result.res);
         res.send(gr.response())
     }

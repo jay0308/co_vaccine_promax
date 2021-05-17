@@ -3,6 +3,8 @@
     "DB_URL": "localhost:27017",
     "PUBLIC_URL": "http://covaccine-promax.ddns.net",
     "PORT": "5000",
+    "CRON1_PORT":"5001",
+    "CRON2_PORT":"5002",
     "SMS_KEY": "e2333edf",
     "SMS_SECRET_KEY": "PWfVtWo1CiDKsPkH",
     "DB": "covaccinedb",

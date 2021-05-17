@@ -66,5 +66,9 @@ module.exports = {
             OTP:"OTP"
         }
 
+    },
+    APIS:{
+        getDistricts: stateId => `https://cdn-api.co-vin.in/api/v2/admin/location/districts/${stateId}`,
+        getCentersByDisctric: (districtId,date) => `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${districtId}&date=${date}`
     }
 }

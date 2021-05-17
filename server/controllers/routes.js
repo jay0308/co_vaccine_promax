@@ -5,8 +5,7 @@ const userController = require("./userController");
 const postController = require("./postController");
 const TokenValidator = require("../utils/validateTokenMiddleware");
 const UtilController = require("../controllers/UtilController");
-const busController = require("./BusController");
-const bookingController = require("./BookingController");
+const coVaccineController = require("../controllers/coVaccineController");
 
 router.use("/v3",TokenValidator.validate)
 
@@ -16,10 +15,7 @@ router.use("/util",UtilController);
 
 router.use("/post",TokenValidator.validate,postController);
 
-router.use("/bus",TokenValidator.validate,busController);
-
-router.use("/booking",TokenValidator.validate,bookingController);
-
+router.use("/co",coVaccineController);
 
 
 router.get('/', function (req, res) {

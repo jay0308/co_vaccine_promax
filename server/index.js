@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express()
 require('dotenv').config();
-const port = process.env.NODE_ENV === "development" ? 5004 : process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
 const path = require('path');
 
@@ -16,7 +16,7 @@ require("./loaders/dbInitializer").initialize();
 require("./loaders/initializeSMS");
 
 //initialize redis
-// require("./loaders/redisInitializer");
+require("./loaders/redisInitializer");
 
 
 // parse application/x-www-form-urlencoded
