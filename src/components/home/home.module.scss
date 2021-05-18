@@ -5,6 +5,15 @@
     font-size: 16px;
     font-weight: bold;
     padding-bottom: 90px;
+
+    .mainContInner{
+        max-width: 500px;
+        margin: 0 auto;
+
+        .headLabel{
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .dragBox{

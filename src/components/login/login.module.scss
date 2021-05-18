@@ -28,4 +28,22 @@
         text-align: center;
         font-size: 12px;
     }
+
+    .resendText{
+        margin-top: 10px;
+        font-size:14px;
+        color: #48ad51;
+        text-align: center;
+    }
+    .resendBtn{
+        margin-top: 10px;
+        color: #002060;
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            color: #998fa2;
+        }
+    }
 }

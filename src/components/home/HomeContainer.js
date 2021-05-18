@@ -6,16 +6,14 @@ const mapStateToProps = (state) => {
     return {
         loaderReducer: state.loaderReducer,
         successReducer:state.successReducer,
-        userDataReducer:state.userDataReducer
+        userDataReducer:state.userDataReducer,
     };
 };
 const mapDispatchToProps = (dispatch) => {
     return {
         loaderAction: (val) => dispatch(actions.loaderAction(val)),
         successAction:(data) => dispatch(actions.successAction(data)),
-        getRoutesAction: () => dispatch(actions.getRoutes()),
-        getBusTypeAction: () => dispatch(actions.getBusType()),
-        busSearchAction: (qs) => dispatch(actions.searchBus(qs)),
+        getBeneficiaryAction:() =>  dispatch(actions.co_benefeciary())
     };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -3,8 +3,26 @@ import s from "../../login/login.module.scss";
 import { Field, reduxForm } from 'redux-form';
 import TextField from '@material-ui/core/TextField';
 import global from "../../../utils/common";
+import {isEqual}  from "lodash";
 
 class OtpScreen extends Component{
+    constructor(props){
+        super(props);
+        this.timer = null;
+        this.state = {
+            timerCounter:3*60
+        }
+
+    }
+    componentDidMount(){
+        this.startTimer()
+    }
+    componentWillReceiveProps(nextProps){
+        if(nextProps.co_generateToken_res && !isEqual(nextProps.co_generateToken_res,this.props.co_generateToken_res)){
+            this.startTimer()
+        }
+    }
+
     renderTextField = ({
         label,
         input,
@@ -22,6 +40,24 @@ class OtpScreen extends Component{
                 type = "number"
             />
         )
+    startTimer = () => {
+        this.timer = setInterval(()=>{
+            if(this.state.timerCounter === 0){
+                clearInterval(this.timer)
+                return 
+            }
+            this.setState({
+                timerCounter:this.state.timerCounter - 1
+            })
+        },1000)
+    }
+    resendBtnHandler = () => {
+        this.setState({
+            timerCounter:3*60
+        },()=>{
+            this.props.resendOtp()
+        })
+    }
     render(){
         const { sendOtpToParent, pristine, reset, submitting,otpFormValues } = this.props
         return (
@@ -44,6 +80,13 @@ class OtpScreen extends Component{
                             Clear Values
                         </button> */}
                     </div>
+                    {
+                        this.state.timerCounter === 0 ?
+                        <div className={s.resendBtn} onClick={this.resendBtnHandler}>Resend OTP</div>
+                        :
+                        <div className={s.resendText}>Resend after {this.state.timerCounter}s</div>
+
+                    }
                 </form>
             </div>
         )

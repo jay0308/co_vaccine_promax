@@ -9,7 +9,6 @@ const appConstants = require("../utils/constants");
 const request = require("request");
 const bodyParser = require('body-parser');
 const moment = require("moment");
-const { DateRange } = require('@material-ui/icons');
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -18,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-cron.schedule('0-59/5 * * * * *', async function () {
+cron.schedule('* 0-59/5 * * * *', async function () {
     console.log('---------------------');
     console.log('Running Update Centers Cron Job');
     let districs = await getDistricts();
@@ -67,21 +66,22 @@ const getCenters = async (districtIds) => {
     let centerList = {};
     for (let k = 0; k < Object.keys(districtIds).length; k++) {
         const e = Object.keys(districtIds)[k];
-        centerList[e] = [];
-        for (let j = 0; j < districtIds[e].length; j++) {
-            const dist = districtIds[e][j];
-            for (let i = 0; i < 15; i++) {
-                let date = moment.tz("Asia/Kolkata").add('days',i).format("DD-MM-YYYY");
+        centerList[e] = {};
+        for (let i = 0; i < 15; i++) {
+            let date = moment.tz("Asia/Kolkata").add('days',i).format("DD-MM-YYYY");
+            centerList[e][date] = []
+            for (let j = 0; j < districtIds[e].length; j++) {
+                const dist = districtIds[e][j];
                 try{
                     let centerRes = await getCentersCall(dist.district_id,date);
-                    console.log("<<<<",centerRes)
-                    centerList[e].push(centerRes);
-
+                    centerList[e][date].push(...centerList[e][date],...centerRes.sessions);
+    
                 }catch(e){
                     console.log("ERROR",e)
                 }
             }
         }
+       
     }
     return centerList
 }
@@ -91,12 +91,13 @@ const getCentersCall = async (districtId,date) => {
         request(appConstants.APIS.getCentersByDisctric(districtId,date), function (error, response, body) {
             if(error || response.statusCode !== 200){
                 reject(error)
+            }else{
+                resolve(JSON.parse(response.body))
             }
-            resolve(body)
         });
     })
 }
 
 
 
-app.listen(port, () => console.log(`Update Centers Cron on port ${port}!`))
+app.listen(port, () => console.log(`Update Centers Cron running on port ${port}!`))

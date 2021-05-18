@@ -95,7 +95,11 @@ class Header extends Component {
         const { userDataReducer, getUser, userList, headerHeight, screenName } = this.props;
         return (
             <div className={s.defaultHeader}>
-                {userDataReducer && <span className={s.hamburger} onClick={this.openSidebarMenu}><MenuIcon /></span>}<Link to="/"><span>Guide Bus</span></Link>
+                {/* {userDataReducer && <span className={s.hamburger} onClick={this.openSidebarMenu}><MenuIcon /></span>} */}
+                <Link to="/"><span>Co Vaccine Pro Max</span></Link>
+                {
+                    <span onClick={this.logout}><Link to="/login">Logout</Link></span>
+                }
                 {/* {userDataReducer && <span className={s.SearchIcon} onClick={this.openSearch}><SearchIcon /></span>} */}
                 
             </div>
@@ -124,20 +128,20 @@ class Header extends Component {
                     </header>
                 </div>
                 {
-                    this.state.showSidebarMenu &&
-                    <SidebarMenu
-                        closeSidebarMenu={this.closeSidebarMenu}
-                        userDataReducer={userDataReducer}
-                    />
+                    // this.state.showSidebarMenu &&
+                    // <SidebarMenu
+                    //     closeSidebarMenu={this.closeSidebarMenu}
+                    //     userDataReducer={userDataReducer}
+                    // />
                 }
                 {
-                    this.state.showSearch &&
-                    <SearchComponent
-                        closeSearch={this.closeSearch}
-                        userList={userList}
-                        getUser={getUser}
-                        userClickHandler={this.userClickHandler}
-                    />
+                    // this.state.showSearch &&
+                    // <SearchComponent
+                    //     closeSearch={this.closeSearch}
+                    //     userList={userList}
+                    //     getUser={getUser}
+                    //     userClickHandler={this.userClickHandler}
+                    // />
                 }
             </React.Fragment>
         )

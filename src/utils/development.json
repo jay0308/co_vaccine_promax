@@ -2,6 +2,7 @@
     "ENV": "dev",
     "DB_URL": "http://covaccine-promax.ddns.net:27017",
     "PUBLIC_URL": "http://localhost:5004",
+    "COWIN_URL":"https://cdn-api.co-vin.in",
     "PORT": "5000",
     "CRON1_PORT":"5001",
     "CRON2_PORT":"5002",
