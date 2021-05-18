@@ -10,13 +10,13 @@ let server = http.createServer(app);
 
 
 // initialize db
-require("./loaders/dbInitializer").initialize();
+// require("./loaders/dbInitializer").initialize();
 
-// initialize sms service
-require("./loaders/initializeSMS");
+// // initialize sms service
+// require("./loaders/initializeSMS");
 
-//initialize redis
-require("./loaders/redisInitializer");
+// //initialize redis
+// require("./loaders/redisInitializer");
 
 
 // parse application/x-www-form-urlencoded
