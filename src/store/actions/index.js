@@ -3,7 +3,7 @@ import { genericPopupAction, clearPostCreated, successAction, scoringAction, get
 import { createPost, getPost, likePost } from "./postActions";
 import {getRoutes,createRoutes,deleteRoutes,createBusType,editBusType,getBusType,deleteBusType,getBus,createBus,editBus, deleteBus, searchBus, editRoutes} from "./busActions";
 import {getBookingDetails,bookSeat,cancelBooking,payBooking, bookingStatus, bookingInstamozo, bookingRefund, bookingBusReports, sendTripStatus} from "./bookingAction";
-import {co_generateToken, co_validateOtp,co_benefeciary} from "./cowinAction";
+import {co_generateToken, co_validateOtp,co_benefeciary, getStates, getDistricts} from "./cowinAction";
 const actions = {
     loginSubmit,
     otpSubmit,
@@ -47,6 +47,8 @@ const actions = {
     // cowin actions
     co_generateToken,
     co_validateOtp,
-    co_benefeciary
+    co_benefeciary,
+    getStates,
+    getDistricts
 }
 export default actions;

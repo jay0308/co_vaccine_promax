@@ -4,7 +4,7 @@ import moment from "moment-timezone";
 
 const BeneficiaryCard = props => {
     return (
-        <div className={s.beneficiaryCont}>
+        <div className={s.beneficiaryCont} onClick={props.onClickHandler}>
             <div className={s.inner}>
                 <div className={s.row}>
                     <span className={s.name}>{props.name}</span>
