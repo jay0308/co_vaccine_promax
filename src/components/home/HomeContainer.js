@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import actions  from '../../store/actions';
 import Home from "./Home";
+import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state) => {
     return {
@@ -16,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
         getBeneficiaryAction:() =>  dispatch(actions.co_benefeciary())
     };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));

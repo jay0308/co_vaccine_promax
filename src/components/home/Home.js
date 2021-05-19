@@ -4,11 +4,15 @@ import BusSearch from '../busSearch'
 import DefaultLayout from "../common/defaultLayout/DefaultLayout";
 import { get } from "lodash";
 import BeneficiaryCard from "../beneficiaryCard";
+import { useHistory } from "react-router-dom";
 
 export default class Home extends Component {
   componentDidMount() {
     let { getBeneficiaryAction } = this.props;
     getBeneficiaryAction();
+  }
+  gotoForm = () => {
+    this.props.history.push('/form');
   }
   render() {
     let { successReducer } = this.props;
@@ -23,6 +27,7 @@ export default class Home extends Component {
                 return (
                   <div style={{ cursor: "pointer" }}>
                     <BeneficiaryCard
+                      onClickHandler={this.gotoForm}
                       key={e.beneficiary_reference_id}
                       {...e}
                     />

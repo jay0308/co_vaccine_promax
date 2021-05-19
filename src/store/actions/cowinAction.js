@@ -82,4 +82,40 @@ export const co_benefeciary = () => {
     });
 }
 
+export const getStates = () => {
+    return ((dispatch, getState) => {
+        dispatch(loaderAction(true))
+        request.getRequestWithToken(constants.APIS.getStates)
+            .then((res) => {
+                dispatch(loaderAction(false))
+                if (res.status === 200) {
+                    dispatch(successAction({ ...getState().successReducer, "stateList": res.data }));
+                }
+            })
+            .catch((error) => {
+                dispatch(loaderAction(false))
+                dispatch(genericPopupAction(error.toString()));
+                console.log("Error", error)
+            })
+    });
+}
+
+export const getDistricts = (qs) => {
+    return ((dispatch, getState) => {
+        dispatch(loaderAction(true))
+        request.getRequestWithToken(constants.APIS.getDistricts(qs))
+            .then((res) => {
+                dispatch(loaderAction(false))
+                if (res.status === 200) {
+                    dispatch(successAction({ ...getState().successReducer, "districtList": res.data }));
+                }
+            })
+            .catch((error) => {
+                dispatch(loaderAction(false))
+                dispatch(genericPopupAction(error.toString()));
+                console.log("Error", error)
+            })
+    });
+}
+
 

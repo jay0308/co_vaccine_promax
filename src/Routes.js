@@ -7,6 +7,7 @@ import RegisterComponent from "./components/register/RegisterContainer";
 import ErrorFallback from "./components/common/ErrorScreen/ErrorFallback";
 import SecuredRoutes from "./SecuredRoutes";
 import global from "./utils/common";
+import BasicDetailsForm from "./components/BasicDetailsForm/BasicDetailsForm"
 
 class Routes extends React.Component {
   render() {
@@ -26,7 +27,9 @@ class Routes extends React.Component {
                     <Route exact path="/">
                       <Home />
                     </Route>
-
+                    <Route exact path="/form">
+                      <BasicDetailsForm />
+                    </Route>
                   </React.Fragment>
                 }
 
