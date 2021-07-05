@@ -32,7 +32,7 @@ class LoginScreen extends Component {
                         <Field
                             name="mobileNo"
                             component={this.renderTextField}
-                            label="Your Mobile No"
+                            label="Your registered Mobile No (CoWIN)"
                             className={s.textField}
                         />
                     </div>
@@ -44,7 +44,8 @@ class LoginScreen extends Component {
                             Clear Values
                         </button> */}
                     </div>
-                    <div className={s.registerTxt}>Yet not registered? <Link to="/register">Go Ahead</Link></div>
+                    <div className={s.registerTxt}><b>Note: </b> Please register yourself at <a style={{marginLeft:"8px"}} href="https://selfregistration.cowin.gov.in/" target="__blank"> https://selfregistration.cowin.gov.in/</a></div>
+                    {/* <div className={s.registerTxt}>Yet not registered? <Link to="/register">Go Ahead</Link></div> */}
                 </form>
             </div>
         )

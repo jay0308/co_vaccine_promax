@@ -9,13 +9,20 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: #FF3A43;
+    background: $base-color;
     color: #fff;
     display: inline-block;
     align-items: center;
     box-sizing: border-box;
     height: 68px;
     // @include globalGradient();
+
+
+    .defaultHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     a{
         color: #fff;

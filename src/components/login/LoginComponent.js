@@ -13,8 +13,8 @@ class LoginComponent extends Component {
     }
 
     sendOtpToParent = (otp, type) => {
-        const { otpSubmit } = this.props;
-        otpSubmit(parseInt(otp), this.state.email, this.state.reqType)
+        const { otpSubmit, co_generateToken_res } = this.props;
+        otpSubmit(parseInt(otp), co_generateToken_res.txnId)
     }
 
     storeEmail = (email) => {
@@ -25,10 +25,15 @@ class LoginComponent extends Component {
         handleSubmit(email)
     }
 
+    resendOtp = () => {
+        const { handleSubmit } = this.props;
+        handleSubmit(this.state.email)
+    }
+
     render() {
-        const { sendOtp } = this.props
-        if (sendOtp)
-            return <DefaultLayout screenName="otp"> <OtpScreen sendOtpToParent={this.sendOtpToParent} {...this.props} /></DefaultLayout>
+        const { co_generateToken_res } = this.props
+        if (co_generateToken_res)
+            return <DefaultLayout screenName="otp"> <OtpScreen sendOtpToParent={this.sendOtpToParent} {...this.props} resendOtp = {this.resendOtp} /></DefaultLayout>
         else
             return (
                 <DefaultLayout screenName="login">

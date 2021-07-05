@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express()
 require('dotenv').config();
-const port = process.env.NODE_ENV === "development" ? 5004 : process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
 const path = require('path');
 
@@ -10,12 +10,12 @@ let server = http.createServer(app);
 
 
 // initialize db
-require("./loaders/dbInitializer").initialize();
+// require("./loaders/dbInitializer").initialize();
 
-// initialize sms service
-require("./loaders/initializeSMS");
+// // initialize sms service
+// require("./loaders/initializeSMS");
 
-//initialize redis
+// //initialize redis
 // require("./loaders/redisInitializer");
 
 

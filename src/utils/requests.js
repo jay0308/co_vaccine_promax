@@ -1,7 +1,7 @@
 import axios from "axios";
 let envString = process.env.NODE_ENV;
 let envJson = require(`./${envString}.json`);
-let base_url = envJson["PUBLIC_URL"];
+let base_url = envJson["COWIN_URL"];
 
 export const getRequest = (url,headers={}) => {
     url = `${base_url}/api${url}`;
@@ -29,7 +29,7 @@ export const postRequest = (url,data,headers={}) => {
 export const getRequestWithToken = (url,headers={}) => {
     url = `${base_url}/api${url}`;
     headers = {...headers}
-    headers["auth"] = JSON.parse(localStorage.getItem("userInfo")) ? JSON.parse(localStorage.getItem("userInfo")).token : "" ;
+    headers["Authorization"] = `Bearer ${JSON.parse(localStorage.getItem("userInfo")) ? JSON.parse(localStorage.getItem("userInfo")).token : ""}`;
     const options = {
         method: 'get',
         url: url,
@@ -42,7 +42,7 @@ export const getRequestWithToken = (url,headers={}) => {
 export const postRequestWithToken = (url,data,headers={}) => {
     url = `${base_url}/api${url}`;
     headers = {...headers}
-    headers["auth"] = JSON.parse(localStorage.getItem("userInfo")) ? JSON.parse(localStorage.getItem("userInfo")).token : "" ;
+    headers["Authorization"] = `Bearer ${JSON.parse(localStorage.getItem("userInfo")) ? JSON.parse(localStorage.getItem("userInfo")).token : ""}`;
     const options = {
         method: 'post',
         url: url,

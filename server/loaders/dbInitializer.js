@@ -18,7 +18,7 @@ async function main(){
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
      * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
      */
-    const uri = `mongodb://${process.env.DB_URL}/${process.env.DB}?retryWrites=true&w=majority`;
+    const uri = process.env.NODE_ENV === "development" ? "mongodb+srv://covaccinedb:covaccinedb@cluster0.236tt.mongodb.net/covaccinedb?retryWrites=true&w=majority" : `mongodb://${process.env.DB_URL}/${process.env.DB}?retryWrites=true&w=majority`;
  
 
     client = new MongoClient(uri);

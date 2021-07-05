@@ -43,6 +43,8 @@ module.exports = {
                     case "isArray":
                         if (!Array.isArray(element.value))
                             return false
+                        if(element.value.length === 0)
+                            return false
                         break;
                     default:
                         break;

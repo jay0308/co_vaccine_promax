@@ -32,7 +32,14 @@ const constants = {
         bookingInstamojo:"/booking/instamojo",
         bookingRefund:"/booking/refund",
         getReports:"/booking/reports",
-        sendTripStatus:"/booking/send/tripStatus"
+        sendTripStatus:"/booking/send/tripStatus",
+
+        // coWin APIS
+        co_generateToken:"/v2/auth/generateMobileOTP",
+        co_validateOtp:"/v2/auth/validateMobileOtp",
+        co_beneficiary:"/v2/appointment/beneficiaries",
+        getStates: "/v2/admin/location/states",
+        getDistricts:(qs)=> `/v2/admin/location/districts/${qs}`
     },
     MSGS:{
         genericErrorMsg:"Oops, Something went wrong"
